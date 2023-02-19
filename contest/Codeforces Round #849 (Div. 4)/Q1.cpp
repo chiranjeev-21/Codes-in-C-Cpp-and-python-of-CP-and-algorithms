@@ -1,8 +1,5 @@
-#include <iostream>
-#include <math.h>
-#include <vector>
-#include <unordered_map>
- 
+#include <bits/stdc++.h>
+
 using namespace std;
 // Some typedef's
 typedef long long ll;
@@ -18,16 +15,21 @@ typedef long long ll;
 int main()
 {
     IOS;
-    int n;
-    cin>>n;
-  	vector<int>vec(n,0);
-  	int sum=0;
-    unordered_map<int,int>mp;
-    for(int i=0;i<n;i++){
-      	cin>>vec[i];
-        mp[vec[i]]++;
-	}
-  	mp.size()==n?cout<<"Yes":cout<<"No";
-    
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        char c;
+        cin>>c;
+        if(c=='c' ||c=='o'||c=='d'||c=='e'||c=='f'||c=='o'||c=='e'||c=='r'||c=='c'||c=='e'||c=='s'){
+            cout<<"Yes"<<"\n";
+        }
+        else{
+            cout<<"no"<<"\n";
+        }
+
+
+    }
+
     return 0;
 }
