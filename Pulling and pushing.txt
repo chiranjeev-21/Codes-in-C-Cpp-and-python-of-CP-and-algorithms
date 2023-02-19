@@ -1,0 +1,11 @@
+git remote add upstream https://github.com/NEONScience/DI-NEON-participants.git
+
+git pull upstream master
+
+git status
+
+git add
+
+git commit
+
+git push origin master
