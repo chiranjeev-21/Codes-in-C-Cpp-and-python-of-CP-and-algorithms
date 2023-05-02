@@ -1,0 +1,9 @@
+https://www.geeksforgeeks.org/python-in-competitive-programming/
+https://www.geeksforgeeks.org/inputoutput-external-file-cc-java-python-competitive-programming/?ref=rp
+https://www.geeksforgeeks.org/python-input-methods-competitive-programming/?ref=rp  
+https://www.geeksforgeeks.org/fast-i-o-for-competitive-programming-in-python/?ref=rp
+https://www.geeksforgeeks.org/avoid-tle-in-python-in-competitive-programming/?ref=rp    
+https://www.geeksforgeeks.org/python-tips-and-tricks-for-competitive-programming/?ref=rp
+https://www.geeksforgeeks.org/python-tricks-competitive-coding/?ref=rp
+
+https://www.geeksforgeeks.org/competitive-coding-setup-for-c-and-python-in-vs-code-using-python-script/?ref=rp

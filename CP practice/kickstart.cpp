@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// int NumberOfRecordBreakingDays(int numberOfDays, vector<int> visitors) {
-//   int maxVisitors = -1;
-//         int recordBreakingDays = 0;
-//         for (int i = 0; i < visitors.size(); i++) {
-//             if (visitors[i] > maxVisitors && (i == numberOfDays - 1 || visitors[i] > visitors[i + 1]))
-//                 recordBreakingDays++;
-//             maxVisitors = max(maxVisitors, visitors[i]);
-//         }
-//         return recordBreakingDays;
-// }
+int NumberOfRecordBreakingDays(int numberOfDays, vector<int> visitors) {
+  int maxVisitors = -1;
+        int recordBreakingDays = 0;
+        for (int i = 0; i < visitors.size(); i++) {
+            if (visitors[i] > maxVisitors && (i == numberOfDays - 1 || visitors[i] > visitors[i + 1]))
+                recordBreakingDays++;
+            maxVisitors = max(maxVisitors, visitors[i]);
+        }
+        return recordBreakingDays;
+}
 bool my_compare(string a, string b)
 {
     if (a.compare(0, b.size(), b) == 0
