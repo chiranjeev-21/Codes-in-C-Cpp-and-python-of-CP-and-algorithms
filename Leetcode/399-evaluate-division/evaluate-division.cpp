@@ -1,7 +1,7 @@
 class Solution {
 public:
 
-    double dfsMultiply(map<string, vector<pair<string, double>>>& adj, string& src, string& dest, unordered_set<string>& visited, double currentWeight){
+    double dfs(map<string, vector<pair<string, double>>>& adj, string& src, string& dest, unordered_set<string>& visited, double currentWeight){
     visited.insert(src);
     if (src == dest)
         return currentWeight;
@@ -10,7 +10,7 @@ public:
         double weight = neighbor.second;
         // cout<<nextNode<<" "<<weight<<"\n";
         if (visited.find(nextNode) == visited.end()) {
-            double result = dfsMultiply(adj, nextNode, dest, visited,currentWeight * weight);
+            double result = dfs(adj, nextNode, dest, visited,currentWeight * weight);
             if (result != -1)
                 return result;
         }
@@ -47,7 +47,7 @@ public:
                 string source = queries[i][0];
                 string destination = queries[i][1];
                 double W=1;
-                double temp = dfsMultiply(adj, source, destination, visited, W);
+                double temp = dfs(adj, source, destination, visited, W);
                 if (temp != -1){
                     ans.push_back(temp);
                 }
