@@ -5,7 +5,7 @@ public:
     visited.insert(src);
     if (src == dest)
         return currentWeight;
-    for (auto neighbor : adj.at(src)) {
+    for (auto neighbor : adj[src]) {
         string nextNode = neighbor.first;
         double weight = neighbor.second;
         // cout<<nextNode<<" "<<weight<<"\n";
