@@ -26,8 +26,9 @@ public:
 
         temp = head;
         while(temp) {
-            map[temp]->next = map[temp->next];
-            map[temp]->random = map[temp->random];
+            Node* copy = map[temp];
+            copy->next = map[temp->next];
+            copy->random = map[temp->random];
             temp = temp->next;
         }
 
