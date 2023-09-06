@@ -41,7 +41,7 @@ public:
 
     //2) O(1) Space solution
 
-    Node* copyRandomList(Node* head) {
+    Node* copyRandomList(Node* head){
         if(!head) return nullptr;
 
         Node* original = head; // itr for original
@@ -49,7 +49,7 @@ public:
         Node* temp = nullptr; // temporary for node creation
 
         // First pass: clone nodes and link them next to origial
-        while(original) {
+        while(original){
             temp = new Node(original->val);
             temp->next = original->next;
             original->next=temp;
@@ -60,10 +60,11 @@ public:
         Node* newHead = head->next;
 
         // Second pass: Assign random pointers to cloned nodes
-        while(original) {
-            if(original->random) {
+        while(original){
+            if(original->random){
                 original->next->random = original->random->next;
-            } else {
+            }
+            else{
                 original->next->random = nullptr;
             }
             original = original->next->next; // skip copy
@@ -72,14 +73,15 @@ public:
         original = head;
 
         // Third Pass: Seperate original and cloned 
-        while(original) {
+        while(original){
             temp = original->next; 
             original->next = temp->next; 
             original = original->next;
 
-            if(original) {
+            if(original){
                 temp->next = original->next;
-            } else {
+            }
+            else{
                 temp->next = nullptr;
             }
         }
