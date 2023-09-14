@@ -4,9 +4,11 @@ private:
         while (mp.find(src) != mp.end() && !mp[src].empty()) {
             string next = mp[src].top();
             mp[src].pop();
+            // ans.push_back(src);
             dfs(mp, next, ans);
         }
-        ans.insert(ans.begin(), src);
+        ans.push_back(src);
+        // ans.insert(ans.begin(), src);
     }
 
 public:
@@ -32,6 +34,7 @@ public:
         // }
         string src = "JFK";
         dfs(mp, src, ans);
+        reverse(ans.begin(),ans.end());
         return ans;
     }
 };
