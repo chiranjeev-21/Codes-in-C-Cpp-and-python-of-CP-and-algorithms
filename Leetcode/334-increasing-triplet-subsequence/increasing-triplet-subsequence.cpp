@@ -1,6 +1,7 @@
 class Solution {
 public:
     bool increasingTriplet(vector<int>& nums) {
+        ios_base::sync_with_stdio(false);
         int n = nums.size();
         if(n <= 2)
             return false;
