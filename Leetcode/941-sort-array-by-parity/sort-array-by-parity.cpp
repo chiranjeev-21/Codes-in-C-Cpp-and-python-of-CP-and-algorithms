@@ -22,6 +22,6 @@ public:
         //         right++;
         //     }
         // }
-        return nums;
+        return move(nums);
     }
 };
