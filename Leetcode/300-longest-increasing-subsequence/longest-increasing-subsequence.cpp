@@ -13,6 +13,6 @@ public:
                 *idx = nums[i];
             }
         }
-    return vec.size();
+        return vec.size();
     }
 };
