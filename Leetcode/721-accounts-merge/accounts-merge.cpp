@@ -1,43 +1,3 @@
-// class Solution {
-// public:
-//     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
-//         unordered_map<string, string> emailToName;
-//         unordered_map<string, set<string>> graph;
-//         for (const auto& account : accounts) {
-//             const string& name = account[0];
-//             for (int i = 1; i < account.size(); ++i) {
-//                 emailToName[account[i]] = name;
-//                 if (i == 1) continue;
-//                 graph[account[i]].insert(account[i - 1]);
-//                 graph[account[i - 1]].insert(account[i]);
-//             }
-//         }
-
-//         vector<vector<string>> result;
-//         unordered_map<string, bool> visited;
-//         for (const auto& [email, _] : emailToName) {
-//             if (!visited[email]) {
-//                 vector<string> component;
-//                 dfs(graph, email, visited, component);
-//                 sort(component.begin(), component.end());
-//                 component.insert(component.begin(), emailToName[email]);
-//                 result.push_back(move(component));
-//             }
-//         }
-//         return result;
-//     }
-
-//     void dfs(unordered_map<string, set<string>>& graph, const string& email,
-//              unordered_map<string, bool>& visited, vector<string>& component) {
-//         visited[email] = true;
-//         component.push_back(email);
-//         for (const auto& neighbor : graph[email]) {
-//             if (!visited[neighbor]) {
-//                 dfs(graph, neighbor, visited, component);
-//             }
-//         }
-//     }
-// };
 struct DSU {
 	vector<int> e;
 	DSU(int N) { e = vector<int>(N, -1); }
@@ -81,7 +41,12 @@ public:
             int node = ds.get(it.second);
             mergeMail[node].push_back(mail);
         }
-
+        // for(auto i :mergeMail){
+        //     for(auto j :i){
+        //         cout<<j<<" ";
+        //     }
+        //     cout<<"\n";
+        // }
         vector<vector<string>> ans;
         for (int i = 0; i < n; i++) {
             if(mergeMail[i].size() == 0) continue;
