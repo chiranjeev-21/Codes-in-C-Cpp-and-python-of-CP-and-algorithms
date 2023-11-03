@@ -20,6 +20,9 @@ struct DSU {
 class Solution {
 public:
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
+        ios::sync_with_stdio(0);
+        cin.tie(0);              
+        cout.tie(0);
         int n = accounts.size();
         DSU ds(n);
         unordered_map<string, int> mp;
