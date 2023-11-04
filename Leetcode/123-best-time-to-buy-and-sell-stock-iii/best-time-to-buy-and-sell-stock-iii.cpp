@@ -2,7 +2,7 @@ class Solution {
 public:
 
     int f(int i, bool buy, vector<int>& prices, int cap, vector<vector<vector<int>>>& dp){
-        if(cap==0 || i==prices.size()){
+        if(cap==2 || i==prices.size()){
             return 0;
         }
         if(dp[i][buy][cap]!=-1){
@@ -13,7 +13,7 @@ public:
             profit = max(-prices[i] + f(i+1,0,prices,cap,dp),f(i+1,1,prices,cap,dp));
         }
         else{
-            profit = max(prices[i] + f(i+1,1,prices,cap-1,dp), f(i+1,0,prices,cap,dp));
+            profit = max(prices[i] + f(i+1,1,prices,cap+1,dp), f(i+1,0,prices,cap,dp));
         }
         return dp[i][buy][cap]=profit;
     }
@@ -21,6 +21,6 @@ public:
     int maxProfit(vector<int>& prices) {
         int n=prices.size();
         vector<vector<vector<int>>>dp(n,vector<vector<int>>(2,vector<int>(3,-1)));
-        return f(0,true,prices,2,dp);
+        return f(0,true,prices,0,dp);
     }
 };
