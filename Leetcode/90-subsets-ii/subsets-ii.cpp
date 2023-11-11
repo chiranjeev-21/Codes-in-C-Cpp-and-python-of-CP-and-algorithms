@@ -1,6 +1,6 @@
 class Solution {
 public:
-    #define IOS ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    // #define IOS ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     void solve(set<vector<int>> &res, const vector<int> &nums, int i, int n, vector<int> temp)
     {
         if (i == n)
@@ -18,7 +18,7 @@ public:
 
     vector<vector<int>> subsetsWithDup(vector<int> &nums)
     {
-        IOS;
+        // IOS;
         set<vector<int>> res;
         int n = nums.size();
         vector<int> temp;
