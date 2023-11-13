@@ -10,9 +10,9 @@ public:
                 }
             }
         }
-        for(auto i:dp){
-            cout<<i<<" ";
-        }
+        // for(auto i:dp){
+        //     cout<<i<<" ";
+        // }
         return dp[0];
     }
 };
