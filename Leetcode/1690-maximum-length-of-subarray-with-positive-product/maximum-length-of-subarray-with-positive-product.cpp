@@ -22,12 +22,8 @@ public:
                 ans=max(ans,end-start);
             }
             else{
-                if(left!=-1){
-                    ans=max(ans,end-left-1);
-                }
-                if(right!=-1){
-                    ans=max(ans,right-start);
-                }
+                ans=max(ans,end-left-1);
+                ans=max(ans,right-start);
             }
             i=end+1;
         }
