@@ -17,7 +17,7 @@ public:
                 }
             }
         }
-        //even length 
+        //even length
         for(int mid = 0; mid < n; mid++) {
             for(int x = 0; x <= mid + 1 ; x++) {
                 if(s[mid-x+1] != s[mid+x]) {
