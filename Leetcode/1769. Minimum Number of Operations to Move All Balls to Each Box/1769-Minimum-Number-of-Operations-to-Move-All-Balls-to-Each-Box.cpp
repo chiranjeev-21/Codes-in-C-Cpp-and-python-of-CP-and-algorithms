@@ -16,7 +16,12 @@ public:
         //     }
         //     ops.push_back(ans);
         // }
+        // APPROACH
+        // here left keeps count of number of ones to the left of this index and similiarly
+        // right keeps countof number of ones to the right of a particular index.
 
+        // the left_sum, right_sum arrays contain how many operations to move all the ones
+        // to the left of this index and right of this index.
         //O(N) OPTIMISED
         vector<int>left(n,0),right(n,0),left_sum(n,0),right_sum(n,0),ans;
         // left[0]=(boxes[0]=='1'?1:0);
